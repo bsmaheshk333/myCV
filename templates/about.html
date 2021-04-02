@@ -1,0 +1,132 @@
+{% block content %}
+{% load static %}
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>{{title}}</h1>
+  <p>About Developer<br></p>
+
+</div>
+
+<h2 style="text-align:center; color:black;">About Designer</h2>
+
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'img/me3.jpg' %}" alt="Jane" style="width:100%; height:60%; border-radius:50%;">
+      <div class="container">
+        <h2>B S Mahesh Kumar</h2>
+        <p class="title align-text-center"><u>Jr. Python Developer</u></p>
+        <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: blue;">Self-taught Python developer.
+          Worked as a Python developer during Dec 2019 to Sept 2020 in KTC Pvt Ltd at Pune Maharastra, India.
+
+          <h4><i >Current position:</i> <i class="title"> Assistant Professor</i></h4>
+        <h4><i>Qualification: </i><i class="title">B.E, M.Tech</i></h4>
+        <p>bsmaheshk333@gmail.com</p>
+        <p>73531-01447</p>
+        <p>
+
+        <h4 style="color: blue">Reach out to our developer social profiles</h4>
+        <a href="http://www.linkedin.com/in/bsmaheshk333"title="linked In">
+          <img style="width:30px; height:30px;" src="{% static 'img/link.png' %}">
+        </a>
+
+        <a href="https://github.com/bsmaheshk333" title="Github">
+          <img style="width:30px; height:30px;" src="{% static 'img/git.png' %}">
+        </a>
+
+        <a href="ackoverflow.com/users/14253746/b-s-mahesh-kumar" title="Stack overflow">
+          <img style="width:30px; height:30px;" src="{% static 'img/stack.png' %}">
+        </a>
+
+
+        <a href="https://www.instagram.com/insignificantsoul1/" title="Instagram">
+          <img style="width:30px; height:30px;" src="{% static 'img/insta.jpeg' %}">
+        </a>
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  </div>
+</body>
+</html>
+{% endblock content %}
